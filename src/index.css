@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(135deg, #000000 0%, #1a0000 50%, #330000 100%);
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: drift var(--duration) linear infinite;
+  opacity: 0;
+  box-shadow: 
+    0 0 4px #fff,
+    0 0 8px #fff,
+    0 0 12px #ff0000,
+    0 0 16px #ff0000,
+    0 0 20px #ff0000;
+}
+
+@keyframes drift {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(calc(var(--direction) * 100px));
+  }
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-red-500 to-red-800 bg-clip-text text-transparent;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full 
+         hover:from-red-700 hover:to-red-900 transition-all duration-300 font-semibold;
+}
+
+.section-padding {
+  @apply px-6 py-20;
+}
+
+.container-width {
+  @apply max-w-7xl mx-auto;
+}
+
+.card {
+  @apply bg-black/30 p-6 rounded-lg backdrop-blur-sm border border-red-900/20;
+}
+
+.faq-item {
+  @apply border-b border-red-900/20 py-4;
+}
+
+.team-card {
+  @apply bg-black/40 rounded-lg overflow-hidden transition-transform hover:scale-105;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  animation: slide 20s linear infinite;
+  display: flex;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+}
+
+/* Define the scrolling container */
+.process-scroll-container {
+  display: flex;
+  gap: 20px; /* Increased gap between the cards */
+  padding: 0 1rem;
+  white-space: nowrap;
+  animation: scroll-left 20s linear infinite; /* Continuous scroll */
+  width: calc(100% + 60px); /* Ensure the full width for the entire scroll */
+}
+
+/* Add keyframes to make the cards scroll smoothly */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Optional: Make sure the container does not overflow */
+#process {
+  overflow: hidden;
+}
+
+/* Optional: Adjust other sections to ensure they don't overflow */
+.container-width {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.animation-delay {
+  animation-delay: 0s;
+}
