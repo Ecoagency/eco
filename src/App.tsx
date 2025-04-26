@@ -7,7 +7,7 @@ import skin from './components/images/skincare.jpg'
 import { motion } from 'framer-motion';
 import sulaymon from './components/images/sulaymon.jpeg'
 import cro from './components/images/pictureofcro.jpg'
-import random from './components/images/random.jpg'
+import girl from './components/images/girl.jpeg'
 import one from './components/images/1.png'
 import two from './components/images/2.png'
 import three from './components/images/3.png'
@@ -394,16 +394,16 @@ function HomePage() {
           image: sulaymon
         },
         {
-          name: 'Hoor Ul Ain',
-          position: 'CRO Specialist',
+          name: 'Mahbub Bin Numan',
+          position: 'CRO specialist',
           description: 'Hoor Ul Ain has generated 15+ million in sales for 20+ businesses across skincare niches.',
           image: cro
         },
         {
-          name: 'Alex Johnson',
-          position: 'Lead Developer',
-          description: 'Alex is the technical mastermind, building seamless and efficient solutions to support our marketing efforts.',
-          image: random
+          name: 'Hoor Ul Ain',
+          position: 'Paid Ads Specialist',
+          description: 'Hoor is the technical mastermind, building seamless and efficient solutions to support our marketing efforts.',
+          image: girl
         }
       ].map((member, index) => (
         <motion.div
@@ -492,10 +492,7 @@ function HomePage() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>contact@youragency.com</li>
-                <li>+1 (555) 123-4567</li>
-                <li>123 Digital Street</li>
-                <li>San Francisco, CA 94105</li>
+                <li>London UK</li>
               </ul>
             </div>
             <div>
@@ -572,11 +569,18 @@ function BookingPage() {
           </div>
 
           <div className="text-center">
-            <button className="btn-primary">
-              Schedule Your Call <MessageSquare className="inline ml-2" size={20} />
-            </button>
-            <p className="mt-4 text-gray-400">30-minute free consultation. No obligations.</p>
-          </div>
+  <a
+    href="https://calendly.com/ronniedurbin91/30min"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <button className="btn-primary">
+      Schedule Your Call <MessageSquare className="inline ml-2" size={20} />
+    </button>
+  </a>
+  <p className="mt-4 text-gray-400">30-minute free consultation. No obligations.</p>
+</div>
+
         </div>
       </div>
     </div>
